@@ -24,6 +24,11 @@ locals {
   mv ./kubectl /usr/local/bin/kubectl
   echo "source <(kubectl completion bash)" >> /home/$user/.bashrc
 
+  curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
+  chmod 700 get_helm.sh
+  ./get_helm.sh
+  echo "source <(helm completion bash)" >> /home/$user/.bashrc
+
   echo 'export PS1="\u\[\e[01;34m\]($(kubectl config current-context | grep -o "[^/]*$"))\[\e[00m\]:\w/$ "' >> /home/$user/.bashrc
   EOF
 }
