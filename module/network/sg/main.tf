@@ -56,8 +56,8 @@ resource "aws_security_group" "node_sg" {
 
 resource "aws_security_group_rule" "node_sg_rule_1" {
   type              = "ingress"
-  from_port         = 1025
-  to_port           = 65535
+  from_port         = 30000
+  to_port           = 32767
   protocol          = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = aws_security_group.node_sg.id
