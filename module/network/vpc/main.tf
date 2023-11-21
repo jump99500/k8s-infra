@@ -26,7 +26,8 @@ resource "aws_subnet" "public" {
     {
       Name = format("${var.name}-%s-%s",
         "pub", substr(var.azs[count.index], length(var.azs[count.index]) - 1, 1)
-      )
+      ),
+      "kubernetes.io/role/elb" = 1
     }
   )
 }
