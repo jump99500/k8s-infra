@@ -1,4 +1,4 @@
-module "node" {
+module "ebs-csi-driver" {
   source = "../../../module/iam/ebs-csi-driver"
 
   name      = "k8s-infra"
