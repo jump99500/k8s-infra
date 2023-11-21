@@ -75,6 +75,16 @@ resource "aws_security_group_rule" "node_sg_rule_2" {
 }
 
 resource "aws_security_group_rule" "node_sg_rule_3" {
+  type                     = "ingress"
+  from_port                = 9443
+  to_port                  = 9443
+  protocol                 = "tcp"
+  source_security_group_id = aws_security_group.eks_sg.id
+  security_group_id        = aws_security_group.node_sg.id
+  description              = "Allow load balancer controller webhook access"
+}
+
+resource "aws_security_group_rule" "node_sg_rule_4" {
   type              = "ingress"
   from_port         = 0
   to_port           = 0
@@ -84,7 +94,7 @@ resource "aws_security_group_rule" "node_sg_rule_3" {
   description       = "communication for worker group each other"
 }
 
-resource "aws_security_group_rule" "node_sg_rule_4" {
+resource "aws_security_group_rule" "node_sg_rule_5" {
   type              = "egress"
   from_port         = 0
   to_port           = 0
