@@ -1,5 +1,5 @@
 variable "eks_version" {
-  default = "1.26"
+  default = "1.27"
 }
 
 variable "vpc_public_access_cidrs" {
