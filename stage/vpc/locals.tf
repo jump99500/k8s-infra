@@ -3,7 +3,7 @@ locals {
   vpc_name        = "Jeewoong-Terraform" # VPC 이름
   access_key      = var.accesskey
   secret_key      = var.secretkey  
-  allowed_account_ids = "144149479695"
+  allowed_account_ids = ["144149479695"]
   environment     = "stage" # tag에 집어넣을 환경명
   
   vpc_cidr_block  = "10.0.0.0/16" # VPC CIDR block
