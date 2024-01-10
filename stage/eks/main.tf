@@ -1,5 +1,8 @@
 provider "aws" {
   region = local.region
+  access_key = local.access_key
+  secret_key = local.secret_key
+  allowed_account_ids = local.allowed_account_ids
 }
 
 
@@ -9,14 +12,13 @@ terraform {
     organization = "Suwoong-admin" #organization명
 
     workspaces {
-      name = "k8s-infra"  #workspace명
+      name = "k8s-infra-create-eks"  #workspace명
     }
   }
 }
 
 data "terraform_remote_state" "vpc" {
   backend = "remote"
-
   config = {
     organization = "Suwoong-admin"   #organization명
     workspaces = {

@@ -2,7 +2,9 @@ locals {
   region          = "ap-northeast-2"  # AWS region 선택 : VPC와 동일하게
   cluster_name    = "Jeewoong-cluster" # EKS 이름 작성
   cluster_version = "1.26" # Kubernetes version
-
+  access_key      = var.accesskey
+  secret_key      = var.secretkey  
+  allowed_account_ids = ["144149479695"]
   environment     = "stage" # tag에 집어넣을 환경명
 
   # AWS EKS Managed node group 으로 node 생성
