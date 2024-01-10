@@ -1,7 +1,7 @@
 locals {
   common_tags = {
     Environment = var.environment
-    managed_by  = "mokpolar"
+    managed_by  = "jeewoong"
     region      = var.region
   }
 
