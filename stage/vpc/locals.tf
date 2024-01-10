@@ -1,6 +1,6 @@
 locals { 
   region          = "ap-northeast-2" # AWS region 선택
-  vpc_name        = "Jeewoong-Terraform-VPC" # VPC 이름
+  vpc_name        = "Jeewoong-Terraform" # VPC 이름
   access_key      = var.access_key
   secret_key      = var.secret_key  
   allowed_account_ids = "144149479695"
