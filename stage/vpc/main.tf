@@ -2,6 +2,30 @@ provider "aws" {
   region = local.region
 }
 
+
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "Suwoong-admin" #organization명
+
+    workspaces {
+      name = "k8s-infra"  #workspace명
+    }
+  }
+}
+
+data "terraform_remote_state" "vpc" {
+  backend = "remote"
+
+  config = {
+    organization = "Suwoong-admin"   #organization명
+    workspaces = {
+      name = "k8s-infra"   #workspace명
+    }
+  }
+}
+
+/*
 # Terraform workspace : S3 bucket에 tfstate를 저장
 terraform {
   backend "s3" {
@@ -10,6 +34,8 @@ terraform {
     key    = "my-eks-cluster/vpc.tfstate" # 하부 경로명
   }
 }
+*/
+
 
 module "vpc" {
   source          = "../../modules/vpc"
