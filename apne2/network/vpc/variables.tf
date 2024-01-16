@@ -11,7 +11,7 @@ variable "vpc_tags" {
     "Name" = "k8s-infra-vpc"
   }
 }
-
+ 
 variable "create_pub_igw" {
   type    = bool
   default = true
