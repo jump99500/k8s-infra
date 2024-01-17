@@ -1,7 +1,7 @@
 module "eks" {
   source = "../../module/cluster"
 
-  name                    = "k8s-infra"
+  name                    = "Jeewoong-k8s-infra"
   create_cluster          = true
   eks_version             = var.eks_version
   vpc_subnet_ids          = [data.terraform_remote_state.vpc.outputs.subnet_ids[0], data.terraform_remote_state.vpc.outputs.subnet_ids[1]]

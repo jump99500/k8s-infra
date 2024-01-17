@@ -3,7 +3,7 @@ module "node" {
 
   create_lc          = true
   create_asg         = true
-  name               = "k8s-infra"
+  name               = "Jeewoong-k8s-infra"
   eks_name           = data.terraform_remote_state.cluster.outputs.eks_id
   security_group_ids = [data.terraform_remote_state.sg.outputs.node_sg_id]
   key_name           = "aws_k8s_test"
