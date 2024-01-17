@@ -7,7 +7,7 @@ provider "aws" {
 data "aws_caller_identity" "current" {
 
 }
-
+ 
 variable "account_id" {
   default = ["144149479695"]
 }

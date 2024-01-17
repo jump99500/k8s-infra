@@ -1,6 +1,6 @@
 module "vpc" {
   source = "../../../module/network/vpc"
-
+ 
   create_vpc           = true
   vpc_cidr_block       = var.vpc_cidr_block
   enable_dns_hostnames = var.enable_dns_hostnames
