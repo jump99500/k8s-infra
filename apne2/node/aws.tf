@@ -17,5 +17,5 @@ variable "region" {
 }
 
 variable "profile" {
-  default = "suwoong-admin"
+  default = "Suwoong-admin"
 }
