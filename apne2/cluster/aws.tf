@@ -1,7 +1,7 @@
 provider "aws" {
   allowed_account_ids = var.account_id
   region              = var.region
-  profile             = var.profile
+  #profile             = var.profile
 }
 
 data "aws_caller_identity" "current" {
@@ -19,3 +19,4 @@ variable "region" {
 variable "profile" {
   default = "Suwoong-admin"
 }
+ 

@@ -31,4 +31,3 @@ variable "sub_cidr_block" {
     public = ["10.2.1.0/24", "10.2.2.0/24"]
   }
 }
-
