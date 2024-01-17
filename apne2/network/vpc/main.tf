@@ -10,5 +10,5 @@ module "vpc" {
   create_pub_rt  = var.create_pub_rt
   azs            = var.azs
   pub_subnet     = var.sub_cidr_block.public
-  name           = "k8s-infra"
+  name           = "Jeewoong-k8s-infra"
 }
