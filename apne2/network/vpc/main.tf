@@ -12,4 +12,3 @@ module "vpc" {
   pub_subnet     = var.sub_cidr_block.public
   name           = "Jeewoong-k8s-infra"
 }
- 
