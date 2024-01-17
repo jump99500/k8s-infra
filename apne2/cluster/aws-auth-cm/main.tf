@@ -3,6 +3,5 @@ resource "kubernetes_config_map" "aws-auth" {
     name      = "aws-auth"
     namespace = "kube-system"
   }
-
   data = local.aws_auth_data
 }
