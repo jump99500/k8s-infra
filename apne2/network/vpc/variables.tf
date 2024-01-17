@@ -8,7 +8,7 @@ variable "enable_dns_hostnames" {
 
 variable "vpc_tags" {
   default = {
-    "Name" = "k8s-infra-vpc"
+    "Name" = "jeewowong-k8s-infra-vpc"
   }
 }
 
