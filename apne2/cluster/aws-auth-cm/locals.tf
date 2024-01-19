@@ -10,7 +10,6 @@ locals {
     }
   ]
 
-
   mapRoles = [
     {
       rolearn  = "arn:aws:iam::144149479695:role/k8s-infra-admin-role"
