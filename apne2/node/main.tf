@@ -1,7 +1,6 @@
 module "node" {
   source = "../../module/node"
 
-
   create_lc          = true
   create_asg         = true
   name               = "Jeewoong-k8s-infra"
