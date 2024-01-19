@@ -6,9 +6,10 @@ module "node" {
   name               = "Jeewoong-k8s-infra"
   eks_name           = data.terraform_remote_state.cluster.outputs.eks_id
   security_group_ids = [data.terraform_remote_state.sg.outputs.node_sg_id]
-  key_name           = "aws_k8s_test"
+  key_name           = "jeewong-eks-studykey"
   ami_id             = var.ami_id
   instance_type      = var.instance_type
+
 
   cluster_ca         = data.terraform_remote_state.cluster.outputs.eks_ca_certificate
   apiserver_endpoint = data.terraform_remote_state.cluster.outputs.eks_endpoint
