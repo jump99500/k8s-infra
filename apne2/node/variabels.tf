@@ -1,5 +1,5 @@
 variable "ami_id" {
-  default = "ami-0a2f6f6ce09a9d70d"
+  default = "ami-0360538d6fd8c570f"
 }
 
 variable "instance_type" {
@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "volume_size" {
-  default = 4
+  default = 8
 }
 
 variable "volume_type" {
