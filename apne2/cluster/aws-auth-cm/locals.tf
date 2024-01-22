@@ -1,7 +1,7 @@
 locals {
   bootstrap = [
     {
-      rolearn  = "arn:aws:iam::144149479695:role/k8s-infra-node-role"
+      rolearn  = "arn:aws:iam::144149479695:role/Jeewoong-k8s-infra-node-role"
       username = "system:node:{{EC2PrivateDNSName}}"
       groups = [
         "system:bootstrappers",
