@@ -2,7 +2,6 @@ module "eks" {
   source = "../../module/cluster"
 
 
-
   name                    = "Jeewoong-k8s-infra"
   create_cluster          = true
   eks_version             = var.eks_version
