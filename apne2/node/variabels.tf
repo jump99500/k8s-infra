@@ -10,7 +10,6 @@ variable "volume_size" {
   default = 8
 }
 
-
 variable "volume_type" {
   default = "gp3"
 }
