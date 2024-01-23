@@ -9,7 +9,7 @@ locals {
       ]
     }
   ]
-
+ 
   mapRoles = [
     {
       rolearn  = "arn:aws:iam::144149479695:role/Jeewoong-k8s-infra-admin-role"
