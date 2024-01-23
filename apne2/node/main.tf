@@ -19,9 +19,9 @@ module "node" {
   volume_size      = var.volume_size
   volume_type      = var.volume_type
 
-  min_size          = 1
+  min_size          = 2
   max_size          = 5
-  desired_capacity  = 1
+  desired_capacity  = 2
   subnet_ids        = [data.terraform_remote_state.vpc.outputs.subnet_ids[0], data.terraform_remote_state.vpc.outputs.subnet_ids[1]]
   health_check_type = var.health_check_type
 }
