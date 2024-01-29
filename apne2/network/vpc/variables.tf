@@ -12,16 +12,6 @@ variable "vpc_tags" {
   }
 }
 
-variable "create_pub_igw" {
-  type    = bool
-  default = true
-}
-
-variable "create_pub_rt" {
-  type    = bool
-  default = true
-}
-
 variable "azs" {
   default = ["ap-northeast-2a", "ap-northeast-2c"]
 }
