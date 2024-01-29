@@ -22,7 +22,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
   tags = {
     Name = format("${var.name}-%s-%s",
-      "pub", substr(var.azs[count.index], length(var.azs[count.index]) - 1, 1)
+      "pub", substr(var.azs[count.index], length(var.azs[count.index])-1, 1)
     ),
     "kubernetes.io/role/elb" = 1
   }
