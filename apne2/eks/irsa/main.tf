@@ -1,5 +1,5 @@
 resource "aws_iam_openid_connect_provider" "irsa" {
-  url = data.terraform_remote_state.cluster.outputs.eks_oidc
+  url = data.terraform_remote_state.eks.outputs.eks_oidc
 
   client_id_list = [
     "sts.amazonaws.com"

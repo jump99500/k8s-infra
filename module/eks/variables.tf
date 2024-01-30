@@ -3,11 +3,6 @@ variable "name" {
   default = ""
 }
 
-variable "create_cluster" {
-  type    = bool
-  default = true
-}
-
 variable "eks_version" {
   type    = string
   default = ""
