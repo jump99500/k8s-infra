@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "policy_document" {
 
 resource "aws_iam_role" "eks_role" {
   name               = format("${var.name}-%s-%s", "eks", "role")
-  assume_role_policy = data.aws_iam_policy_document.policy_trust_relationships.json
+  assume_role_policy = data.aws_iam_policy_document.policy_document.json
 
   tags = {
     Name = format("${var.name}-%s-%s", "eks", "role")
