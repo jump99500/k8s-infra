@@ -3,11 +3,6 @@ variable "name" {
   default = ""
 }
 
-variable "create_adminhost" {
-  type    = bool
-  default = true
-}
-
 variable "ami" {
   type    = string
   default = ""

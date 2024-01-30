@@ -3,7 +3,7 @@ locals {
   user_data = <<-EOF
   #!/bin/bash -xe
 
-  sed -i 's/#Port 22/Port 2023/' /etc/ssh/sshd_config
+  sed -i 's/#Port 22/Port 2024/' /etc/ssh/sshd_config
   systemctl restart sshd
 
   user=k8s-admin
