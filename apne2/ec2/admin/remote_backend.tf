@@ -4,7 +4,7 @@ terraform {
     organization = "sangun-admin"
 
     workspaces {
-      name = "k8s-infra_apne2_ec2_adminhost"
+      name = "k8s-infra_apne2_ec2_admin"
     }
   }
 }

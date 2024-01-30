@@ -1,8 +1,7 @@
 module "adminhost" {
-  source = "../../../module/ec2/adminhost"
+  source = "../../../module/ec2/admin"
 
   name                   = "k8s-infra"
-  create_adminhost       = true
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = "aws_k8s_test"

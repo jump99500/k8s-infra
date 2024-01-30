@@ -1,8 +1,6 @@
 resource "aws_instance" "adminhost" {
-  count = var.create_adminhost ? 1 : 0
-
   ami                         = var.ami
-  iam_instance_profile        = aws_iam_instance_profile.admin_profile.id
+  iam_instance_profile        = aws_iam_instance_profile.instance_profile.id
   instance_type               = var.instance_type
   key_name                    = var.key_name
   subnet_id                   = var.subnet_id
