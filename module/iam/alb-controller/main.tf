@@ -1,9 +1,9 @@
-resource "aws_iam_role_policy_attachment" "alb_controller_policy_attachment" {
+resource "aws_iam_role_policy_attachment" "alb-controller_policy" {
   role       = aws_iam_role.alb_controller_role.name
   policy_arn = aws_iam_policy.alb_controller_policy.arn
 }
 
-data "aws_iam_policy_document" "policy_trust_relationships" {
+data "aws_iam_policy_document" "policy_document" {
   statement {
     effect  = "Allow"
     actions = ["sts:AssumeRoleWithWebIdentity"]
@@ -27,7 +27,7 @@ data "aws_iam_policy_document" "policy_trust_relationships" {
   }
 }
 
-resource "aws_iam_policy" "alb_controller_policy" {
+resource "aws_iam_policy" "alb-controller_policy" {
   name = format("${var.name}-%s-%s-%s", "alb", "controller", "policy")
 
   policy = <<EOF
@@ -275,9 +275,9 @@ resource "aws_iam_policy" "alb_controller_policy" {
 EOF
 }
 
-resource "aws_iam_role" "alb_controller_role" {
+resource "aws_iam_role" "alb-controller_role" {
   name               = format("${var.name}-%s-%s-%s", "alb", "controller", "role")
-  assume_role_policy = data.aws_iam_policy_document.policy_trust_relationships.json
+  assume_role_policy = data.aws_iam_policy_document.policy_document.json
 
   tags = {
     Name = format("${var.name}-%s-%s-%s", "alb", "controller", "role")

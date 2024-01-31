@@ -20,5 +20,5 @@ variable "sa_name" {
 
 variable "namespace" {
   type    = string
-  default = ""
+  default = "kube-system"
 }
