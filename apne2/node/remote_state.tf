@@ -22,14 +22,14 @@ data "terraform_remote_state" "sg" {
   }
 }
 
-data "terraform_remote_state" "cluster" {
+data "terraform_remote_state" "eks" {
   backend = "remote"
 
   config = {
     organization = "sangun-admin"
 
     workspaces = {
-      name = "k8s-infra_apne2_cluster"
+      name = "k8s-infra_apne2_eks"
     }
   }
 }
