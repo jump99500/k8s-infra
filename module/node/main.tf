@@ -4,7 +4,7 @@ resource "aws_launch_template" "lt" {
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = var.security_group_ids
-  user_data              = local.user_data
+  user_data              = "${base64encode(local.user_data)}"
 
   iam_instance_profile {
     arn = aws_iam_instance_profile.node_instance_profile.arn
