@@ -1,11 +1,11 @@
-data "terraform_remote_state" "cluster" {
+data "terraform_remote_state" "eks" {
   backend = "remote"
 
   config = {
     organization = "sangun-admin"
 
     workspaces = {
-      name = "k8s-infra_apne2_cluster"
+      name = "k8s-infra_apne2_eks"
     }
   }
 }
@@ -17,7 +17,7 @@ data "terraform_remote_state" "irsa" {
     organization = "sangun-admin"
 
     workspaces = {
-      name = "k8s-infra_apne2_cluster_irsa"
+      name = "k8s-infra_apne2_eks_irsa"
     }
   }
 }
