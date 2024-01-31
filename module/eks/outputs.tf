@@ -11,5 +11,5 @@ output "eks_ca_certificate" {
 }
 
 output "eks_oidc" {
-  value = aws_eks_cluster.eks.identity.0.oidc
+  value = flatten(aws_eks_cluster.eks[*].identity[*].oidc.0.issuer)[0]
 }
