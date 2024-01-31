@@ -7,9 +7,9 @@ output "eks_endpoint" {
 }
 
 output "eks_ca_certificate" {
-  value = aws_eks_cluster.eks.certificate_authority.data
+  value = aws_eks_cluster.eks.certificate_authority.0.data
 }
 
 output "eks_oidc" {
-  value = aws_eks_cluster.eks.identity.oidc.issuer
+  value = aws_eks_cluster.eks.identity.0.oidc
 }
