@@ -28,8 +28,12 @@ resource "aws_autoscaling_group" "node" {
   max_size             = var.max_size
   desired_capacity     = var.desired_capacity
   vpc_zone_identifier  = var.subnet_ids
-  launch_configuration = aws_launch_template.lt.id
   health_check_type    = var.health_check_type
+
+  launch_template {
+    id      = aws_launch_template.lt.id
+    version = "$Latest"
+  }
 
   tag {
     key                 = "Name"
