@@ -1,7 +1,7 @@
 resource "aws_eks_addon" "addons" {
   for_each = local.addon_list
 
-  cluster_name = data.terraform_remote_state.cluster.outputs.eks_id
+  cluster_name = data.terraform_remote_state.eks.outputs.eks_id
 
   addon_name                  = each.key
   addon_version               = lookup(each.value, "addon_version", null)
