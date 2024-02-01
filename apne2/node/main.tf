@@ -1,19 +1,25 @@
 module "node" {
   source = "../../module/node"
 
-
-  create_lc          = true
-  create_asg         = true
+<<<<<<< HEAD
   name               = "Jeewoong-k8s-infra"
   eks_name           = data.terraform_remote_state.cluster.outputs.eks_id
+=======
+  name               = "k8s-infra"
+  eks_name           = data.terraform_remote_state.eks.outputs.eks_id
+>>>>>>> a429bfe93d0e15b5678285f77fe7754473475116
   security_group_ids = [data.terraform_remote_state.sg.outputs.node_sg_id]
   key_name           = "jeewong-eks-studykey"
   ami_id             = var.ami_id
   instance_type      = var.instance_type
 
-
-  cluster_ca         = data.terraform_remote_state.cluster.outputs.eks_ca_certificate
+<<<<<<< HEAD
+  eks_ca             = data.terraform_remote_state.cluster.outputs.eks_ca_certificate
   apiserver_endpoint = data.terraform_remote_state.cluster.outputs.eks_endpoint
+=======
+  eks_ca             = data.terraform_remote_state.eks.outputs.eks_ca_certificate
+  apiserver_endpoint = data.terraform_remote_state.eks.outputs.eks_endpoint
+>>>>>>> a429bfe93d0e15b5678285f77fe7754473475116
 
   volume_encrypted = true
   volume_size      = var.volume_size

@@ -3,16 +3,6 @@ variable "name" {
   default = ""
 }
 
-variable "create_lc" {
-  type    = bool
-  default = true
-}
-
-variable "create_asg" {
-  type    = bool
-  default = true
-}
-
 variable "security_group_ids" {
   type    = list(string)
   default = []
@@ -83,7 +73,7 @@ variable "eks_name" {
   default = ""
 }
 
-variable "cluster_ca" {
+variable "eks_ca" {
   type    = string
   default = ""
 }
@@ -92,3 +82,13 @@ variable "apiserver_endpoint" {
   type    = string
   default = ""
 }
+
+variable "kms_key_id" {
+  type    = string
+<<<<<<< HEAD
+  default = "arn:aws:kms:ap-northeast-2:144149479695:key/8d753568-ea99-490b-b1d3-4aa401b6d044"
+}
+=======
+  default = "arn:aws:kms:ap-northeast-2:985522651362:key/9fdfae90-2be7-44dd-892d-eb6720c064fc"
+}
+>>>>>>> a429bfe93d0e15b5678285f77fe7754473475116
