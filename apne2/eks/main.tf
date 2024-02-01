@@ -1,8 +1,14 @@
 module "eks" {
   source = "../../module/eks"
+<<<<<<< HEAD
 
 
   name                    = "Jeewoong-k8s-infra"
+=======
+  name                    = "Jeewoong-k8s-infra"
+  create_cluster          = true
+  name                    = "k8s-infra"
+>>>>>>> 250d75f3b44499071d63549e3e6d6faccd66ee4c
   eks_version             = var.eks_version
   vpc_subnet_ids          = [data.terraform_remote_state.vpc.outputs.subnet_ids[0], data.terraform_remote_state.vpc.outputs.subnet_ids[1]]
   vpc_security_group_ids  = [data.terraform_remote_state.sg.outputs.eks_sg_id]

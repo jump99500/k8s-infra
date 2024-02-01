@@ -10,7 +10,10 @@ data "terraform_remote_state" "vpc" {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 250d75f3b44499071d63549e3e6d6faccd66ee4c
 data "terraform_remote_state" "sg" {
   backend = "remote"
 
@@ -21,4 +24,8 @@ data "terraform_remote_state" "sg" {
       name = "k8s-infra_apne2_network_sg"
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 250d75f3b44499071d63549e3e6d6faccd66ee4c
