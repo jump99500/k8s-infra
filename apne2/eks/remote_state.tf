@@ -10,6 +10,7 @@ data "terraform_remote_state" "vpc" {
   }
 }
 
+
 data "terraform_remote_state" "sg" {
   backend = "remote"
 
