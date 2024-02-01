@@ -6,5 +6,5 @@ module "vpc" {
   vpc_tags             = var.vpc_tags
   azs                  = var.azs
   pub_subnet           = var.sub_cidr_block.public
-  name                 = "k8s-infra"
+  name                 = "Jeewoong-k8s-infra"
 }
