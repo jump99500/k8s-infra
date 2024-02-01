@@ -3,12 +3,7 @@ resource "aws_iam_role_policy_attachment" "alb-controller_policy" {
   policy_arn = aws_iam_policy.alb-controller_policy.arn
 }
 
-<<<<<<< HEAD
-
-data "aws_iam_policy_document" "policy_trust_relationships" {
-=======
 data "aws_iam_policy_document" "policy_document" {
->>>>>>> a429bfe93d0e15b5678285f77fe7754473475116
   statement {
     effect  = "Allow"
     actions = ["sts:AssumeRoleWithWebIdentity"]
