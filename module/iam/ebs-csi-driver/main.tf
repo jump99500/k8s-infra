@@ -3,7 +3,7 @@ resource "aws_iam_role_policy_attachment" "csi_policy" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
 }
 
-data "aws_iam_policy_document" "policy_trust_relationships" {
+data "aws_iam_policy_document" "policy_document" {
   statement {
     effect  = "Allow"
     actions = ["sts:AssumeRoleWithWebIdentity"]
@@ -29,7 +29,7 @@ data "aws_iam_policy_document" "policy_trust_relationships" {
 
 resource "aws_iam_role" "csi_role" {
   name               = format("${var.name}-%s-%s", "csi", "role")
-  assume_role_policy = data.aws_iam_policy_document.policy_trust_relationships.json
+  assume_role_policy = data.aws_iam_policy_document.policy_document.json
 
   tags = {
     Name = format("${var.name}-%s-%s", "csi", "role")

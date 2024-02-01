@@ -10,14 +10,14 @@ data "terraform_remote_state" "eks" {
   }
 }
 
-data "terraform_remote_state" "irsa" {
+data "terraform_remote_state" "csi-driver" {
   backend = "remote"
 
   config = {
     organization = "Suwoong-admin"
 
     workspaces = {
-      name = "k8s-infra_apne2_eks_irsa"
+      name = "k8s-infra_apne2_iam_ebs-csi-driver"
     }
   }
 }

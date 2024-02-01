@@ -8,10 +8,9 @@ variable "enable_dns_hostnames" {
 
 variable "vpc_tags" {
   default = {
-    "Name" = "k8s-infra-vpc"
+    "Name" = "Jeewoong-k8s-infra-vpc"
   }
 }
-
 
 variable "azs" {
   default = ["ap-northeast-2a", "ap-northeast-2c"]

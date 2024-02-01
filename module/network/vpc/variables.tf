@@ -3,7 +3,6 @@ variable "name" {
   default = ""
 }
 
-
 variable "vpc_cidr_block" {
   type    = string
   default = ""
