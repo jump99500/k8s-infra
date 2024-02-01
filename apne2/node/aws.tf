@@ -10,10 +10,7 @@ variable "account_id" {
 variable "region" {
   default = "ap-northeast-2"
 }
-<<<<<<< HEAD
 
 variable "profile" {
   default = "Suwoong-admin"
 }
-=======
->>>>>>> a429bfe93d0e15b5678285f77fe7754473475116
