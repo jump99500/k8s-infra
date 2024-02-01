@@ -1,5 +1,5 @@
 variable "ssh_port" {
-  default = "2023"
+  default = "2024"
 }
 
 

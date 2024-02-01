@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = concat(aws_vpc.main[*].id, [""])[0]
+  value = aws_vpc.main.id
 }
 
 output "subnet_ids" {
