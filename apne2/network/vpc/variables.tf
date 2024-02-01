@@ -8,18 +8,8 @@ variable "enable_dns_hostnames" {
 
 variable "vpc_tags" {
   default = {
-    "Name" = "jeewowong-k8s-infra-vpc"
+    "Name" = "k8s-infra-vpc"
   }
-}
-
-variable "create_pub_igw" {
-  type    = bool
-  default = true
-}
-
-variable "create_pub_rt" {
-  type    = bool
-  default = true
 }
 
 variable "azs" {
