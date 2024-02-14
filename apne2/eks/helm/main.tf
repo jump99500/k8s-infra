@@ -9,4 +9,3 @@ resource "helm_release" "metrics-server" {
     name  = "apiService.create"
     value = "true"
   }
-}
