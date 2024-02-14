@@ -4,7 +4,7 @@ terraform {
     organization = "Suwoong-admin"
 
     workspaces {
-      name = "k8s-infra_apne2_network_vpc"
+      name = "manager_apne2"
     }
   }
 }
