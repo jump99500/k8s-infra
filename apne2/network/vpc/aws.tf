@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 variable "account_id" {
-  default = ["985522651362"]
+  default = ["144149479695"]
 }
 
 variable "region" {
