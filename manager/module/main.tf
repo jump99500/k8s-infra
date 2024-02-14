@@ -1,6 +1,6 @@
 data "tfe_workspace_ids" "apne2" {
   tag_names    = ["apne2"]
-  organization = "sangun-admin"
+  organization = "Suwoong-admin"
 }
 
 resource "tfe_variable" "apne2_access_key" {

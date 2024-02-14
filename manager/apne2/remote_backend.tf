@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "sangun-admin"
+    organization = "Suwoong-admin"
 
     workspaces {
       name = "manager_apne2"
