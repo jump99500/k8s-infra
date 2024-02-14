@@ -20,3 +20,4 @@ resource "tfe_variable" "apne2_secret_key" {
   workspace_id = each.value
   sensitive    = true
 }
+
