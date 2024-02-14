@@ -1,10 +1,10 @@
 module "node" {
   source = "../../module/node"
 
-  name               = "k8s-infra"
+  name               = "Jeewoong-k8s-infra"
   eks_name           = data.terraform_remote_state.eks.outputs.eks_id
   security_group_ids = [data.terraform_remote_state.sg.outputs.node_sg_id]
-  key_name           = "aws_k8s_test"
+  key_name           = "jeewong-eks-studykey"
   ami_id             = var.ami_id
   instance_type      = var.instance_type
 
