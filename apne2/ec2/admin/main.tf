@@ -2,7 +2,6 @@ module "adminhost" {
   source = "../../../module/ec2/admin"
 
   name                   = "Jeewoong-k8s-infra"
-  create_adminhost       = true
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = "jeewong-eks-studykey"
