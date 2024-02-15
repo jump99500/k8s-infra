@@ -1,7 +1,8 @@
 variable "ssh_port" {
-  default = "2023"
+  default = "2024"
 }
 
+
 variable "my_ip" {
-  default = ["58.151.93.20/32"]
+  default = ["106.254.235.234/32"]
 }

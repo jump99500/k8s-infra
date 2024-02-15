@@ -61,7 +61,7 @@ resource "aws_security_group_rule" "node_sg_rule_1" {
   protocol                 = "tcp"
   source_security_group_id = aws_security_group.eks_sg.id
   security_group_id        = aws_security_group.node_sg.id
-  description              = "nodeport number"
+  description              = "Allow pod communication"
 }
 
 resource "aws_security_group_rule" "node_sg_rule_2" {
