@@ -85,5 +85,5 @@ variable "apiserver_endpoint" {
 
 variable "kms_key_id" {
   type    = string
-  default = "arn:aws:kms:ap-northeast-2:144149479695:key/8d753568-ea99-490b-b1d3-4aa401b6d044"
+  default = "arn:aws:kms:ap-northeast-2:144149479695:key/d9c8062c-ff96-4542-8c9a-41defafccc57"
 }
