@@ -16,7 +16,7 @@ resource "aws_security_group_rule" "admin_sg_rule_1" {
   from_port         = var.ssh_port
   to_port           = var.ssh_port
   protocol          = "tcp"
-  cidr_blocks       = var.my_ip
+  cidr_blocks       = var.my_ip_1
   security_group_id = aws_security_group.admin_sg.id
   description       = "ssh connection for adminhost"
 }
@@ -39,6 +39,16 @@ resource "aws_security_group_rule" "admin_sg_rule_3" {
   cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = aws_security_group.admin_sg.id
   description       = "egress https"
+}
+
+resource "aws_security_group_rule" "admin_sg_rule_4" {
+  type              = "egress"
+  from_port         = var.ssh_port
+  to_port           = var.ssh_port
+  protocol          = "tcp"
+  cidr_blocks       = var.my_ip_2
+  security_group_id = aws_security_group.admin_sg.id
+  description       = "ssh connection for adminhost"
 }
 
 #########################
