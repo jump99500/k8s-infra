@@ -13,12 +13,7 @@ variable "ssh_port" {
   default = ""
 }
 
-variable "my_ip_1" {
-  type    = list(string)
-  default = []
-}
-
-variable "my_ip_2" {
+variable "my_ip" {
   type    = list(string)
   default = []
 }
